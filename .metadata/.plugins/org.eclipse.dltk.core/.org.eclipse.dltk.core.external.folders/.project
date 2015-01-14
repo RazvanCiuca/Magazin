@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.dltk.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link3</name>
+			<type>2</type>
+			<location>/Applications/XAMPP/xamppfiles/htdocs/magazin/.metadata/.plugins/com.zend.php.core/__language__/fe7fbb25</location>
+		</link>
+		<link>
+			<name>.link4</name>
+			<type>2</type>
+			<location>/Applications/XAMPP/xamppfiles/htdocs/magazin/.metadata/.plugins/org.eclipse.php.core/__language__/1a89aeb6</location>
+		</link>
+		<link>
+			<name>.link5</name>
+			<type>2</type>
+			<location>/Applications/XAMPP/xamppfiles/htdocs/magazin/.metadata/.plugins/com.zend.php.core/__language__/e2532dd4</location>
+		</link>
+	</linkedResources>
+</projectDescription>
