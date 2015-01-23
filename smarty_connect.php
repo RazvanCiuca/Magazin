@@ -9,4 +9,6 @@
     $smarty->setCompileDir(URL_BASE_ABS.'templates_c');
     $smarty->setCacheDir(URL_BASE_ABS.'cache');
     $smarty->setConfigDir(URL_BASE_ABS.'configs');
+    
+    $smarty->assign("URL_BASE", URL_BASE);
 ?>

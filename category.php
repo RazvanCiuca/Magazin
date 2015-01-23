@@ -8,5 +8,4 @@
     require_once('menu.php');
     
     
-    $smarty->display('index.tpl');
-?>
+    $smarty->display('category.tpl');
