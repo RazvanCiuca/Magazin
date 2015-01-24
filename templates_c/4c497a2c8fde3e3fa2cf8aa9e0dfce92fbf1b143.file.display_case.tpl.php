@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-24 19:17:43
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-24 23:08:11
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/display_case.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:108098683254c3dec23b9995-96816122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c497a2c8fde3e3fa2cf8aa9e0dfce92fbf1b143' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/display_case.tpl',
-      1 => 1422123456,
+      1 => 1422137288,
       2 => 'file',
     ),
   ),
@@ -26,12 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54c3dec23cede5_18633690')) {function content_54c3dec23cede5_18633690($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('top.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<?php echo $_smarty_tpl->getSubTemplate ('menu.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-
-<div class="container">
+<?php if ($_valid && !is_callable('content_54c3dec23cede5_18633690')) {function content_54c3dec23cede5_18633690($_smarty_tpl) {?><div class="container">
 	<div id="newest-books">
 		<div class='row'>
 			<h3>Newest Books</h3>
@@ -67,8 +62,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['sec']['last']       = ($_sma
 							<img src="<?php echo $_smarty_tpl->tpl_vars['item_image_path']->value;
 echo $_smarty_tpl->tpl_vars['newest_items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
 .jpg" width="75" height="100">
-						</div>
-						
+						</div>						
 					</div>
 					<div class="row">
 						<a tabindex="-1" href="item.php?item_id=<?php echo $_smarty_tpl->tpl_vars['newest_items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
@@ -130,8 +124,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['sec']['last']       = ($_sma
 							<img src="<?php echo $_smarty_tpl->tpl_vars['item_image_path']->value;
 echo $_smarty_tpl->tpl_vars['popular_items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
 .jpg" width="75" height="100">
-						</div>
-						
+						</div>						
 					</div>
 					<div class="row">
 						<a tabindex="-1" href="item.php?item_id=<?php echo $_smarty_tpl->tpl_vars['popular_items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
@@ -157,7 +150,4 @@ echo $_smarty_tpl->tpl_vars['popular_items']->value[$_smarty_tpl->getVariable('s
 			<?php endfor; endif; ?>
 		</div>
 	</div>	
-</div><!-- /.container --> 
-
-<?php echo $_smarty_tpl->getSubTemplate ('bottom.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-<?php }} ?>
+</div><!-- /.container --> <?php }} ?>

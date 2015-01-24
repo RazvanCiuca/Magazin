@@ -12,19 +12,23 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<!-- <li>
+					{* 
+					<li>
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 							    Authors
 							<span class="caret"></span>
 							</button>					
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-								{section name=sec loop=$autori}
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">{$autori[sec].nume_autor}</a></li>
+								{section name=sec loop=$makers}
+									<li role="presentation">
+										<a tabindex="-1" href="{$makers[sec].maker_id}">{$makers[sec].maker_name}</a>
+									</li>
 								{/section}
 							</ul>
 						</div>
-					</li> -->
+					</li> 
+					*}
 					<li class="dropdown">	
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">

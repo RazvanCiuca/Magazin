@@ -19,4 +19,15 @@
     
             return $categories;
         }
+        
+        function getCategory($category_id) {
+          $sql = 'SELECT *
+                  FROM domenii
+                  WHERE id_domeniu='.$category_id;
+          $result = mysql_query($sql);
+          
+          $category_name = mysql_fetch_array($result)['nume_domeniu'];
+          
+          return $category_name;          
+        }
     }
