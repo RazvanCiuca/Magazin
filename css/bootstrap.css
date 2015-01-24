@@ -6329,4 +6329,13 @@ button.close {
     display: none !important;
   }
 }
+
+.item-image {
+	width:75px;
+	height:100px;
+	border:1px black solid; 
+	background-color:#cccccc;
+}
+
+
 /*# sourceMappingURL=bootstrap.css.map */

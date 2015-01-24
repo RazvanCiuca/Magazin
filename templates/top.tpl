@@ -6,7 +6,7 @@
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
    
     <!-- Bootstrap core CSS -->
-    <link href="{$URL_BASE}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{$URL_BASE}css/bootstrap.css" rel="stylesheet">
     
     <!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">

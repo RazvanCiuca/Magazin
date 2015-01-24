@@ -1,5 +1,5 @@
 <?php
-  echo '<br><br><br><br><br><br><br>';
+  echo '<br><br><br><br><br><br><br>';//must fix
   
   $autori = new autor();
   $smarty->assign('autori', $autori->getAutoriNames());

@@ -25,11 +25,11 @@
 							</ul>
 						</div>
 					</li> -->
-					<li>	
+					<li class="dropdown">	
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 							    Categories
-							<span class="caret"></span>
+								<span class="caret"></span>
 							</button>					
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 								{section name=sec loop=$categories}
@@ -38,17 +38,19 @@
 							</ul>
 						</div>
 					</li>
-					<!-- SEARCH -->
 					<li>
-						<div class="col-sm-2 col-md-2 col-lg-2">
-							<div class="input-group">
-								<input type="text" class="form-control input-sm" placeholder="Search for..."> 
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-								</span>
-							</div> <!-- /input-group -->
-						</div>
+						<p class="navbar-text">Cart</p>
 					</li>
+					<!-- SEARCH -->
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control input-sm" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+					</form>
+					
+					
+					
 					
 					<!-- <li><a href="#contact">Contact</a></li> -->
 				</ul>
