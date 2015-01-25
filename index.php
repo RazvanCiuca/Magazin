@@ -4,14 +4,11 @@
     require_once('smarty_connect.php');   
      
     //require classes
-    require_once URL_BASE_ABS.'classes/autor.php';
-    require_once URL_BASE_ABS.'classes/category.php';
-    require_once URL_BASE_ABS.'classes/item.php';
+    require_once URL_BASE_ABS.'classes/maker.class.php';
+    require_once URL_BASE_ABS.'classes/category.class.php';
+    require_once URL_BASE_ABS.'classes/item.class.php';
     
     require_once('menu.php');
-    
-    //set the local currency
-    $smarty->assign('currency', "lei");
     
     
     //assign newest items

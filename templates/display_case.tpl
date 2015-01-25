@@ -7,7 +7,7 @@
 			{section name=sec loop=$newest_items}
 				<div class="col-sm-2 col-md-2 col-lg-2">
 					<div class="row">						
-						<div class="item-image">						
+						<div>						
 							<img src="{$item_image_path}{$newest_items[sec].item_id}.jpg" width="75" height="100">
 						</div>						
 					</div>

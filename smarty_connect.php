@@ -11,4 +11,7 @@
     $smarty->setConfigDir(URL_BASE_ABS.'configs');
     
     $smarty->assign("URL_BASE", URL_BASE);
+    
+    //set the local currency
+    $smarty->assign('currency', "lei");
 ?>

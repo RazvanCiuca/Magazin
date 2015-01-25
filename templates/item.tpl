@@ -5,7 +5,7 @@
 	<div class="row" style="min-height:175px;">
 		<div class="col-sm-2 col-md-2 col-lg-2">
 			<div class="row">
-				<div class="item-image">
+				<div>
 					<img src="{$URL_BASE}item_images/{$item.item_id}.jpg" width="150" height="200">
 				</div>
 			</div>

@@ -12,13 +12,13 @@
     
     
     //assign items
-    $category_id = $_GET['category_id'];
+    $maker_id = $_GET['maker_id'];
     $items = new item();
-    $smarty->assign('items', $items->getItemsByCategory($category_id));
+    $smarty->assign('items', $items->getItemsByMaker($maker_id));
     
-    //assign category name
-    $category_name = new category();
-    $smarty->assign('category_name', $category_name->getCategory($category_id));
+    //assign maker name
+    $maker_name = new maker();
+    $smarty->assign('maker_name', $maker_name->getMakerById($maker_id));
     
     
-    $smarty->display('category.tpl');
+    $smarty->display('maker.tpl');

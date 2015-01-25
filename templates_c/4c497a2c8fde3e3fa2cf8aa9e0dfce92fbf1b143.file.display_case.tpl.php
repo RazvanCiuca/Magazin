@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-24 23:08:11
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-25 11:02:23
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/display_case.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:108098683254c3dec23b9995-96816122%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c497a2c8fde3e3fa2cf8aa9e0dfce92fbf1b143' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/display_case.tpl',
-      1 => 1422137288,
+      1 => 1422180138,
       2 => 'file',
     ),
   ),
@@ -58,7 +58,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['sec']['last']       = ($_sma
 ?>
 				<div class="col-sm-2 col-md-2 col-lg-2">
 					<div class="row">						
-						<div class="item-image">						
+						<div>						
 							<img src="<?php echo $_smarty_tpl->tpl_vars['item_image_path']->value;
 echo $_smarty_tpl->tpl_vars['newest_items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
 .jpg" width="75" height="100">

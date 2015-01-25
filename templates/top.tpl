@@ -8,6 +8,8 @@
     <!-- Bootstrap core CSS -->
     <link href="{$URL_BASE}css/bootstrap.css" rel="stylesheet">
     
+    <link href="{$URL_BASE}css/magazin.css" rel="stylesheet">
+    
     <!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 	
