@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-24 23:02:15
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 15:39:44
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/menu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:36896697554b6a671eb6aa2-74893049%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ba36f808a32857d74022f661174933a7bdc0e8ff' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/menu.tpl',
-      1 => 1422136931,
+      1 => 1422369582,
       2 => 'file',
     ),
   ),
@@ -77,12 +77,12 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['sec']['last']       = ($_sma
 						</div>
 					</li>
 					<li>
-						<p class="navbar-text">Cart</p>
+						<p class="navbar-text"><a href='cart.php'>Cart</a></p>
 					</li>
 					<!-- SEARCH -->
-					<form class="navbar-form navbar-left" role="search">
+					<form class="navbar-form navbar-left" action="search.php" method="GET">
 						<div class="form-group">
-							<input type="text" class="form-control input-sm" placeholder="Search">
+							<input type="text" class="form-control input-sm" placeholder="Search" name="keyword'>
 						</div>
 						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 					</form>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-24 22:34:28
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 15:43:25
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/category.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:154452967154b92cf024a1d8-76731853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5d6fde5554cdfeeaf5382dace015d3220a19e055' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/category.tpl',
-      1 => 1422135266,
+      1 => 1422369788,
       2 => 'file',
     ),
   ),
@@ -87,15 +87,24 @@ item_images/<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getV
 						Price: <?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['price'];?>
  <?php echo $_smarty_tpl->tpl_vars['currency']->value;?>
 
-						<div class="input-group">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
-									Add to cart!
-									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-								</button>
-							</span> 					
-						</div>						
-					</div>
+						<form action="cart.php?action=add" method="POST">
+							<div class="input-group">
+								<input type="hidden" name="item_id" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
+">
+								<input type="hidden" name="item_name" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_name'];?>
+">
+								<input type="hidden" name="maker_name" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['maker_name'];?>
+">
+								<input type="hidden" name="price" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['price'];?>
+">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button submit">
+										Add to cart! <span class="glyphicon glyphicon-shopping-cart"></span>
+									</button>
+								</span>
+							</div>
+						</form>
+				</div>
 				</div>
 			</div>
 		</div>

@@ -25,15 +25,20 @@
 					</div>
 					<div class="row">
 						Price: {$items[sec].price} {$currency}
-						<div class="input-group">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
-									Add to cart!
-									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-								</button>
-							</span> 					
-						</div>						
-					</div>
+						<form action="cart.php?action=add" method="POST">
+							<div class="input-group">
+								<input type="hidden" name="item_id" value="{$items[sec].item_id}">
+								<input type="hidden" name="item_name" value="{$items[sec].item_name}">
+								<input type="hidden" name="maker_name" value="{$items[sec].maker_name}">
+								<input type="hidden" name="price" value="{$items[sec].price}">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button submit">
+										Add to cart! <span class="glyphicon glyphicon-shopping-cart"></span>
+									</button>
+								</span>
+							</div>
+						</form>
+				</div>
 				</div>
 			</div>
 		</div>

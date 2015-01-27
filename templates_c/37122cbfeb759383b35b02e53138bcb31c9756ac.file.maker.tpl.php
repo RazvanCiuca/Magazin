@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-25 11:04:25
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 15:43:32
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/maker.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:54044047154c4bfa9038408-25369829%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '37122cbfeb759383b35b02e53138bcb31c9756ac' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/maker.tpl',
-      1 => 1422180256,
+      1 => 1422369779,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_54c4bfa9085f22_63433539',
   'variables' => 
   array (
     'maker_name' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'currency' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_54c4bfa9085f22_63433539',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54c4bfa9085f22_63433539')) {function content_54c4bfa9085f22_63433539($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('top.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -87,15 +87,24 @@ item_images/<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getV
 						Price: <?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['price'];?>
  <?php echo $_smarty_tpl->tpl_vars['currency']->value;?>
 
-						<div class="input-group">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
-									Add to cart!
-									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-								</button>
-							</span> 					
-						</div>						
-					</div>
+						<form action="cart.php?action=add" method="POST">
+							<div class="input-group">
+								<input type="hidden" name="item_id" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
+">
+								<input type="hidden" name="item_name" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_name'];?>
+">
+								<input type="hidden" name="maker_name" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['maker_name'];?>
+">
+								<input type="hidden" name="price" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['price'];?>
+">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button submit">
+										Add to cart! <span class="glyphicon glyphicon-shopping-cart"></span>
+									</button>
+								</span>
+							</div>
+						</form>
+				</div>
 				</div>
 			</div>
 		</div>

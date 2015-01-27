@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-25 11:02:48
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 15:38:54
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/item.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:135372153954c3eefaa2c9e9-34604640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'addf8a6671e6720f638581b695b88c2c939c6a15' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/item.tpl',
-      1 => 1422180165,
+      1 => 1422369496,
       2 => 'file',
     ),
   ),
@@ -61,14 +61,24 @@ item_images/<?php echo $_smarty_tpl->tpl_vars['item']->value['item_id'];?>
 				Price: <?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
  <?php echo $_smarty_tpl->tpl_vars['currency']->value;?>
 
-				<div class="input-group">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">
-							Add to cart!
-							<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-						</button>
-					</span> 					
-				</div>						
+				<form action="cart.php?action=add" method="POST">
+					<div class="input-group">				
+						<input type="hidden" name="item_id" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['item_id'];?>
+">
+						<input type="hidden" name="item_name" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['item_name'];?>
+">
+						<input type="hidden" name="maker_name" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['maker_name'];?>
+">
+						<input type="hidden" name="price" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
+">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button submit">								
+								Add to cart!
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+							</button>
+						</span> 					
+					</div>	
+				</form>					
 			</div>
 		</div>
 	</div>

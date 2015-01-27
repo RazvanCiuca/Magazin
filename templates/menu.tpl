@@ -43,12 +43,12 @@
 						</div>
 					</li>
 					<li>
-						<p class="navbar-text">Cart</p>
+						<p class="navbar-text"><a href='cart.php'>Cart</a></p>
 					</li>
 					<!-- SEARCH -->
-					<form class="navbar-form navbar-left" role="search">
+					<form class="navbar-form navbar-left" action="search.php" method="GET">
 						<div class="form-group">
-							<input type="text" class="form-control input-sm" placeholder="Search">
+							<input type="text" class="form-control input-sm" placeholder="Search" name="keyword'>
 						</div>
 						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 					</form>
