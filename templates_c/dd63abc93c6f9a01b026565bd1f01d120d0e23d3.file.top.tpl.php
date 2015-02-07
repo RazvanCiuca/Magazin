@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-25 11:02:23
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-28 19:16:42
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/top.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:159228614354b41de3257954-78834335%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd63abc93c6f9a01b026565bd1f01d120d0e23d3' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/top.tpl',
-      1 => 1422180075,
+      1 => 1422468984,
       2 => 'file',
     ),
   ),
@@ -53,5 +53,7 @@ css/magazin.css" rel="stylesheet">
   </head>
   	
   <body>
+  	<div class="container">
+  		
   
   <?php }} ?>

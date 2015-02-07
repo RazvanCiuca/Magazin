@@ -41,6 +41,12 @@
 			</tbody>
 		</table>
 	</div>
+	<div class="row">
+		<a href="checkout.php">
+			<button type="button" class="btn btn-success">Proceed to Checkout!</button>
+		</a>
+	</div>	
+	
 </div>
 
 

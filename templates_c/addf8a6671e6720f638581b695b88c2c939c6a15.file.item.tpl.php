@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 15:38:54
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-02-07 08:34:39
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/item.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:135372153954c3eefaa2c9e9-34604640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'addf8a6671e6720f638581b695b88c2c939c6a15' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/item.tpl',
-      1 => 1422369496,
+      1 => 1422977203,
       2 => 'file',
     ),
   ),
@@ -26,12 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54c3eefaa5fb87_72840610')) {function content_54c3eefaa5fb87_72840610($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('top.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_54c3eefaa5fb87_72840610')) {function content_54c3eefaa5fb87_72840610($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_replace')) include '/Applications/XAMPP/xamppfiles/htdocs/magazin/Smarty/plugins/modifier.replace.php';
+?><?php echo $_smarty_tpl->getSubTemplate ('top.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('menu.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<div class='container'>
+<div class="row">
 	<div class="row" style="min-height:175px;">
 		<div class="col-sm-2 col-md-2 col-lg-2">
 			<div class="row">
@@ -48,7 +49,8 @@ item_images/<?php echo $_smarty_tpl->tpl_vars['item']->value['item_id'];?>
 </h2>	
 			</div>
 			<div class="row">
-				by <a tabindex="-1" href="maker.php?maker_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['maker_id'];?>
+				by <a tabindex="-1" href="<?php echo $_smarty_tpl->tpl_vars['URL_BASE']->value;?>
+makers/<?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['item']->value['maker_name'],' ','-');?>
 ">
 					<?php echo $_smarty_tpl->tpl_vars['item']->value['maker_name'];?>
  </a>
@@ -61,7 +63,8 @@ item_images/<?php echo $_smarty_tpl->tpl_vars['item']->value['item_id'];?>
 				Price: <?php echo $_smarty_tpl->tpl_vars['item']->value['price'];?>
  <?php echo $_smarty_tpl->tpl_vars['currency']->value;?>
 
-				<form action="cart.php?action=add" method="POST">
+				<form action="<?php echo $_smarty_tpl->tpl_vars['URL_BASE']->value;?>
+cart.php?action=add" method="POST">
 					<div class="input-group">				
 						<input type="hidden" name="item_id" value="<?php echo $_smarty_tpl->tpl_vars['item']->value['item_id'];?>
 ">

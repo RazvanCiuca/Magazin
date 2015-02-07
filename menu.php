@@ -1,9 +1,5 @@
 <?php  
-  echo '<br><br><br><br><br><br><br>';//must fix
-  
-  if(!isset($_SESSION['cart'])) {
-      $_SESSION['cart'] = new cart();
-  }
+  //echo '<br><br><br><br><br><br><br>';//must fix  
   
   
   $makers = new maker();

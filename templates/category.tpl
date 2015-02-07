@@ -15,17 +15,17 @@
 				</div>
 				<div class="col-sm-3 col-md-3 col-lg-3">
 					<div class="row">		
-						<a href="item.php?item_id={$items[sec].item_id}">	
+						<a href="{$URL_BASE}items/{$items[sec].item_id}">	
 							<h4>{$items[sec].item_name}</h4>	
 						</a>	
 					</div>
 					<div class="row">
-						by <a tabindex="-1" href="maker.php?maker_id={$items[sec].maker_id}">
+						by <a tabindex="-1" href="{$URL_BASE}makers/{$items[sec].maker_name}">
 							{$items[sec].maker_name} </a>
 					</div>
 					<div class="row">
 						Price: {$items[sec].price} {$currency}
-						<form action="cart.php?action=add" method="POST">
+						<form action="{$URL_BASE}cart.php?action=add" method="POST">
 							<div class="input-group">
 								<input type="hidden" name="item_id" value="{$items[sec].item_id}">
 								<input type="hidden" name="item_name" value="{$items[sec].item_name}">

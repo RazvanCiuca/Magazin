@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 15:56:41
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 18:11:09
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/cart.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:121461890454c4e02964d475-52674066%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0d001d270c2062af7bb0a37063c1403d0c00c655' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/cart.tpl',
-      1 => 1422370597,
+      1 => 1422375561,
       2 => 'file',
     ),
   ),
@@ -126,6 +126,12 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smart
 			</tbody>
 		</table>
 	</div>
+	<div class="row">
+		<a href="checkout.php">
+			<button type="button" class="btn btn-success">Proceed to Checkout!</button>
+		</a>
+	</div>	
+	
 </div>
 
 

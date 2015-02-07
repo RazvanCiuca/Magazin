@@ -1,7 +1,7 @@
 {include file='top.tpl'}
 {include file='menu.tpl'}
 
-<div class='container'>
+<div class="row">
 	<div class="row" style="min-height:175px;">
 		<div class="col-sm-2 col-md-2 col-lg-2">
 			<div class="row">
@@ -15,7 +15,7 @@
 				<h2>{$item.item_name}</h2>	
 			</div>
 			<div class="row">
-				by <a tabindex="-1" href="maker.php?maker_id={$item.maker_id}">
+				by <a tabindex="-1" href="{$URL_BASE}makers/{$item.maker_name|replace:' ':'-'}">
 					{$item.maker_name} </a>
 			</div>
 			<div class="row">
@@ -23,7 +23,7 @@
 			</div>
 			<div class="row">
 				Price: {$item.price} {$currency}
-				<form action="cart.php?action=add" method="POST">
+				<form action="{$URL_BASE}cart.php?action=add" method="POST">
 					<div class="input-group">				
 						<input type="hidden" name="item_id" value="{$item.item_id}">
 						<input type="hidden" name="item_name" value="{$item.item_name}">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-01-27 15:43:25
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-02-03 14:40:13
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/category.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:154452967154b92cf024a1d8-76731853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5d6fde5554cdfeeaf5382dace015d3220a19e055' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/magazin/templates/category.tpl',
-      1 => 1422369788,
+      1 => 1422968044,
       2 => 'file',
     ),
   ),
@@ -71,14 +71,16 @@ item_images/<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getV
 				</div>
 				<div class="col-sm-3 col-md-3 col-lg-3">
 					<div class="row">		
-						<a href="item.php?item_id=<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
+						<a href="<?php echo $_smarty_tpl->tpl_vars['URL_BASE']->value;?>
+items/<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
 ">	
 							<h4><?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_name'];?>
 </h4>	
 						</a>	
 					</div>
 					<div class="row">
-						by <a tabindex="-1" href="maker.php?maker_id=<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['maker_id'];?>
+						by <a tabindex="-1" href="<?php echo $_smarty_tpl->tpl_vars['URL_BASE']->value;?>
+makers/<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['maker_name'];?>
 ">
 							<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['maker_name'];?>
  </a>
@@ -87,7 +89,8 @@ item_images/<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getV
 						Price: <?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['price'];?>
  <?php echo $_smarty_tpl->tpl_vars['currency']->value;?>
 
-						<form action="cart.php?action=add" method="POST">
+						<form action="<?php echo $_smarty_tpl->tpl_vars['URL_BASE']->value;?>
+cart.php?action=add" method="POST">
 							<div class="input-group">
 								<input type="hidden" name="item_id" value="<?php echo $_smarty_tpl->tpl_vars['items']->value[$_smarty_tpl->getVariable('smarty')->value['section']['sec']['index']]['item_id'];?>
 ">

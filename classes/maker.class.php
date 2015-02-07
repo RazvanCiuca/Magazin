@@ -1,15 +1,25 @@
 <?php
     class maker {
+      
+        public $makers = array();
  
         function __construct() {
-            
+            $this->getAllMakers();
+        }
+        
+        function idFromName($maker_name) {
+          
+            foreach ($this->makers as $maker) {
+                if ($maker['maker_name'] == $maker_name)
+                    return $maker['maker_id'];
+            }
         }
         
         function getMakerById($maker_id) {            
-            $sql = 'SELECT *
+            $query = 'SELECT *
                     FROM autori
                     WHERE id_autor='.$maker_id;
-            $result = mysql_query($sql);
+            $result = mysql_query($query);
             
             $maker_name = mysql_fetch_array($result)['nume_autor'];
             
@@ -17,32 +27,20 @@
         }
           
         
-//         function getMakers() {
-//             $sql = 'SELECT * FROM autori';
-//             $result = mysql_query($sql);
-            
-//             $makers = array();
-            
-//             while($row = mysql_fetch_array($result)) {            
-//                 $makers[$row['id_autor']] = $row['nume_autor'];
-//             }   
-            
-//             return $makers;
-//         }
-        
         function getAllMakers() {
-            $sql = 'SELECT * FROM autori';
-            $result = mysql_query($sql);
+            $query = 'SELECT * FROM autori';
+            $result = mysql_query($query);
             
             $makers = array();
             
             while($row = mysql_fetch_array($result)) {
+              
                 $makers[]= array("maker_id"=>$row['id_autor'], 
                                  "maker_name" => $row['nume_autor']
                                 );
             }
             
-            return $makers;
+            $this->makers = $makers;
         }
     }
     
