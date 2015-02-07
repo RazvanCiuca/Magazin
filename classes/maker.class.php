@@ -17,26 +17,26 @@
         
         function getMakerById($maker_id) {            
             $query = 'SELECT *
-                    FROM autori
-                    WHERE id_autor='.$maker_id;
+                    FROM makers
+                    WHERE maker_id='.$maker_id;
             $result = mysql_query($query);
             
-            $maker_name = mysql_fetch_array($result)['nume_autor'];
+            $maker_name = mysql_fetch_array($result)['maker_name'];
             
             return $maker_name;         
         }
           
         
         function getAllMakers() {
-            $query = 'SELECT * FROM autori';
+            $query = 'SELECT * FROM makers';
             $result = mysql_query($query);
             
             $makers = array();
             
             while($row = mysql_fetch_array($result)) {
               
-                $makers[]= array("maker_id"=>$row['id_autor'], 
-                                 "maker_name" => $row['nume_autor']
+                $makers[]= array("maker_id"=>$row['maker_id'], 
+                                 "maker_name" => $row['maker_name']
                                 );
             }
             

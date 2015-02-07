@@ -2,7 +2,7 @@
 {include file='menu.tpl'}
 
 <div class='container'>
-	<div class="row">
+	<div class="row">"smarty_connect.php"
 		<div class="page-header"><h2>{$category_name}</h2></div>
 	</div>
 	{section name=sec loop=$items}

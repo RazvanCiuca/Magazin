@@ -5,7 +5,10 @@
     $category_name = $_GET['category_name'];
     
     $categories = new Category();
+//     print('<br><br><br><br>-------debug');
     $category_id = $categories->idFromName($category_name);
+    $categories->findParents($category_id);
+//     print_r($categories->parents);
     
     $items = new item();
     $smarty->assign('items', $items->getItemsByCategory($category_id));

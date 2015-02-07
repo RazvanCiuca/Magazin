@@ -17,16 +17,16 @@
         }
     
         function getCategories() {
-            $query = 'SELECT * FROM domenii';
+            $query = 'SELECT * FROM categories';
             $result = mysql_query($query);
     
             $categories = array();
            
     
             while($row = mysql_fetch_array($result)) {
-                $categories[]= array("category_id"=>$row['id_domeniu'],
-                                     "category_name" => $row['nume_domeniu']//,
-                                   //  "parent_id" => $row['parent_id']
+                $categories[]= array("category_id"=>$row['category_id'],
+                                     "category_name" => $row['category_name'],
+                                     "parent_id" => $row['parent_id']
                 );
             }
             
@@ -43,8 +43,8 @@
                 if ($category['category_id'] == $category_id) {                   
                   
                     $this->parents[] = array(
-                        "category_id" => $category['id_domeniu'],
-                        "category_name" => $category['nume_domeniu'],
+                        "category_id" => $category['category_id'],
+                        "category_name" => $category['category_name'],
                         "parent_id" => $category['parent_id']
                     );
                    
@@ -61,11 +61,11 @@
              return false;
           
             $query = 'SELECT *
-                  FROM domenii
-                  WHERE id_domeniu='.$category_id;
+                      FROM categories
+                      WHERE category_id='.$category_id;
             $result = mysql_query($query);
             
-            $category_name = mysql_fetch_array($result)['nume_domeniu'];
+            $category_name = mysql_fetch_array($result)['category_name'];
             
             return $category_name;          
         }
